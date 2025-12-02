@@ -485,54 +485,6 @@ while true; do
 done
 ```
 
----
-
-## ARCHITECTURE
-
-```text
-┌─────────────────────────────────────────────────────────┐
-│                  SUBDOMAIN SCANNER                                 │
-├─────────────────────────────────────────────────────────┤
-│                                                                    │
-│  ┌─────────────┐      ┌─────────────┐                        │
-│  │   INPUT     │──────▶│  VALIDATOR  │                           │
-│  │   DOMAIN    │      │   MODULE    │                              │
-│  └─────────────┘      └──────┬──────┘                         │
-│                              │                                      │
-│                              ▼                                     │
-│                    ┌─────────────────┐                           │
-│                    │  MULTI-THREADED │                              │
-│                    │     ENGINE      │                              │
-│                    └────────┬────────┘                           │
-│                             │                                        │
-│         ┌───────────────────┼───────────────────┐             │
-│         ▼                   ▼                   ▼                   │
-│  ┌──────────┐      ┌──────────┐      ┌──────────┐               │
-│  │  crt.sh  │        │    HackerT │      │ AlienV.    │               │
-│  │   API    │        │      API   │      │   OTX      │               │
-│  └────┬─────┘      └────┬─────┘      └────┬─────┘               │
-│       │                 │                      │                      │
-│       └─────────────────┼──────────────────┘                    │
-│                         ▼                                             │
-│                  ┌──────────────┐                                   │
-│                  │ AGGREGATOR &.   │                                  │
-│                  │  DEDUPLICATOR.  │                                  │
-│                  └──────┬───────┘                                   │
-│                         │                                              │
-│                         ▼                                              │
-│                  ┌──────────────┐                                    │
-│                  │ DNS RESOLVER    │ (Optional)                         │
-│                  │  & VERIFIER     │                                    │
-│                  └──────┬───────┘                                    │
-│                         │                                               │
-│                         ▼                                               │
-│                  ┌──────────────┐                                     │
-│                  │    OUTPUT       │                                    │
-│                  │     FILE        │                                   │
-│                  └──────────────┘                                   │
-│                                                                        │
-└───────────────────────────────────────────────────────┘
-```
 
 ---
 
@@ -558,13 +510,13 @@ done
 
 ```text
 ╔═══════════════════════════════════════════════════════╗
-║           SECURITY FEATURES                           ║
+║           SECURITY FEATURES                                     ║
 ╠═══════════════════════════════════════════════════════╣
-║  [+] Zero Direct Target Interaction                  ║
-║  [+] No Logs on Target Systems                       ║
-║  [+] IP Address Protection                           ║
-║  [+] Public Data Sources Only                        ║
-║  [+] Compliant with Responsible Disclosure           ║
+║  [+] Zero Direct Target Interaction                             ║
+║  [+] No Logs on Target Systems                                  ║
+║  [+] IP Address Protection                                      ║
+║  [+] Public Data Sources Only                                   ║
+║  [+] Compliant with Responsible Disclosure                      ║
 ╚═══════════════════════════════════════════════════════╝
 ```
 
