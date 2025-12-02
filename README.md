@@ -29,10 +29,10 @@ The scanner leverages **multi-threading** to simultaneously query multiple intel
 
 ```ascii
 ╔══════════════════════════════════════════════════════════════╗
-║  TARGET: example.com                                         ║
-║  MODE: Passive Enumeration                                   ║
-║  THREADS: Active                                             ║
-║  DETECTION: Zero Risk                                        ║
+║  TARGET: example.com                                                    ║
+║  MODE: Passive Enumeration                                              ║
+║  THREADS: Active                                                        ║
+║  DETECTION: Zero Risk                                                   ║
 ╚══════════════════════════════════════════════════════════════╝
 ```
 
